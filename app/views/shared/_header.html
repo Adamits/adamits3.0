@@ -1,0 +1,24 @@
+<div id="header">
+  <div class="container">
+    <div id="header-Adamits">
+    <%= image_tag("Adamits_logo.jpg") %>
+    </div>
+    <div id="navbar">
+      <%= link_to root_path do %>
+        <div class="navbar-option">
+         Home
+        </div>
+      <% end %>      <div class="navbar-option">
+        About
+      </div>
+      <%= link_to posts_path do %>
+        <div class="navbar-option">
+         Blog
+        </div>
+      <% end %>
+      <div class="navbar-option">
+        Resume
+      </div>
+    </div>
+  </div>
+</div>
