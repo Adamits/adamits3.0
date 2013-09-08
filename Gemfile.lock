@@ -113,7 +113,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  devise
+  devise (= 3.0.3)
   jquery-rails
   pg
   rails (= 3.2.13)
