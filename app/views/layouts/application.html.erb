@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Adamits</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render partial: "shared/header" %>
-  <div class="container">
-    <div class="content">
-      <div class="content_main">
-        <%= yield %>
+  <head>
+    <title>Adamits</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render partial: "shared/header" %>
+    <div class="container">
+      <div class="content">
+        <div class="content_main">
+          <%= yield %>
+        </div>
+        <%= render partial: "shared/content_side" %>
       </div>
-      <%= render partial: "shared/content_side" %>
     </div>
-  </div>
-</body>
+    <%= render partial: "shared/footer" %>
+  </body>
 </html>

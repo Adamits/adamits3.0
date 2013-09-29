@@ -14,8 +14,8 @@ a:link, a:visited {
 }
 
 #header {
-  color: #FFFFFF;
   background-color: #555555;
+  color: #FFFFFF;
   min-height: 50px;
 }
 
@@ -50,10 +50,38 @@ a:link, a:visited {
   color: #444444;
 }
 
-.content {
+.resume {
+
+}
+
+.resume_header {
+text-align: center;
+}
+
+.resume_block {
+  border-bottom: 1px solid #666666;
+  margin-right: 10px;
+  overflow: auto;
+}
+
+.resume_sect {
   float: left;
+  width: 149px;
+}
+
+.resume_content {
+  float: left;
+  width: 480px;
+}
+
+.experience_section {
+  border-bottom: 1px solid #999999;
+}
+
+.content {
   font-size: 18px;
   margin-top: 50px;
+  overflow: auto;
   width: 960;
 }
 
@@ -61,8 +89,11 @@ a:link, a:visited {
   border-right: solid 1px #333333;
   float: left;
   line-height: 25px;
-  text-indent: 50px;
   width: 639px;
+}
+
+.indent {
+  text-indent: 50px;
 }
 
 #content_image {
@@ -79,7 +110,7 @@ a:link, a:visited {
 
 #content_side {
   float: left;
-  width: 320;
+  width: 320px;
 }
 
 .side_header {
@@ -102,12 +133,48 @@ a:link, a:visited {
   height: 132px;
   width: 200px;
 }
+
 .container {
   margin: auto;
+  overflow: auto;
   text-align: left;
   width: 1000px;
 }
 
 .float_left {
   float: left;
+}
+
+#footer {
+  background-color: #555555;
+  color: #FFFFFF;
+  min-height: 100px;
+}
+
+.footer_option {
+  font-size: 12px;
+}
+
+.footer_option_group {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.footer_option:hover a {
+  background-color: #FFFFFF;
+  color: #444444;
+}
+
+.footer_option:hover {
+  background-color: #FFFFFF;
+  color: #444444;
+}
+
+.footer_group {
+  margin-left: 300px;
+}
+
+.footer_image {
+  float: left;
+  padding: 30px 10px 10px 10px;
 }

@@ -8,17 +8,22 @@
         <div class="navbar-option">
          Home
         </div>
-      <% end %>      <div class="navbar-option">
-        About
-      </div>
+      <% end %>
+      <%= link_to about_path do %>
+        <div class="navbar-option">
+         About
+        </div>
+      <% end %>
       <%= link_to posts_path do %>
         <div class="navbar-option">
          Blog
         </div>
       <% end %>
-      <div class="navbar-option">
-        Resume
-      </div>
+      <%= link_to resume_path do %>
+        <div class="navbar-option">
+          Resume
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
