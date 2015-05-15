@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adamits</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="header-bar" class="phxxxl">
+    <%= render partial: "shared/header" %>
+  </div>
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+	<div id="main-content" class="phxxxl">
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-10">
+			<%= yield %>
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+	<!-- POPUP SIGN-IN -->
+  <div id="sign-in-screen">
+    <div id="sign-in-popup">
+      <button id="sign-in-close">
+        <%= image_tag("close.jpg") %>
+      </button>
+      <% unless current_user %>
+        <%= render partial: "devise/sessions/new" %>
+      <% else %>
+        <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>

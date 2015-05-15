@@ -1,0 +1,11 @@
+<% @posts.reverse.each do |post| %>
+    <div class="col-md-4">
+      <h4><%= post.title %></h4>
+      </br>
+      <%= post.content[0, 200]  %>... 
+      <%= link_to post do %>
+        Read More
+      <% end %>
+      </br>
+    </div>
+<% end %>

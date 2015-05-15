@@ -1,0 +1,42 @@
+<div class="col-md-1 col-sm-1">
+</div>
+<div class="col-md-3 col-sm-3">
+	<%= link_to root_path do %>
+		<%= image_tag("Adamits_logo.jpg") %>
+	<% end %>
+</div>
+<% if current_user and current_user.admin %>
+	<div id="search-container" class="col-md-3 col-sm-3">
+		<%= form_tag do %>
+			<%= text_field_tag :search, nil, :class => 'fit-parent' %>
+		<% end %>
+	</div>
+	<%= link_to new_admin_post_path do %>
+		<div class="col-md-1 col-sm-1 header-nav-option">
+	    	New Post
+		</div>
+	<% end %>
+<% else%>
+	<div id="search-container" class="col-md-4 col-sm-4">
+		<%= form_tag do %>
+			<%= text_field_tag :search, nil, :class => 'fit-parent' %>
+		<% end %>
+	</div>
+<% end %>
+<%= link_to "#" do %>
+	<div class="col-md-1 col-sm-1 header-nav-option">
+		Resume
+	</div>
+<% end %>
+<%= link_to "#" do %>
+	<div class="col-md-1 col-sm-1 header-nav-option">
+		About
+	</div>
+<% end %>
+<%= link_to "#" do %>
+	<div id="Admin" class="col-md-1 col-sm-1 header-nav-option">
+		Admin
+	</div>
+<% end %>
+<div class="col-md-1 col-sm-1"> 
+</div>
