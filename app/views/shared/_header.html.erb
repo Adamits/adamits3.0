@@ -1,0 +1,48 @@
+<div class="row nmh-4 bgc-header">
+	<div class="col-md-3 col-md-offset-1 ph-4 text-center">
+		<%= link_to root_path do %>
+			<%= image_tag("Adamits_logo.jpg") %>
+		<% end %>
+	</div>
+	<% if current_user and current_user.admin %>
+		<div class="col-md-3 pa-4 phn-mobile" style="padding-right: 82.25px">
+			<%= form_tag search_posts_path, { method: :get } do %>
+				<%= text_field_tag :search, nil, {placeholder: "search", class: 'fit-parent'} %>
+			<% end %>
+		</div>
+		<%= link_to new_admin_post_path do %>
+			<div class="col-md-1 ph-4 c-white header-option-hover text-center">
+	    	<div class="pv-4">
+	    		New Post
+	    	</div>
+			</div>
+		<% end %>
+	<% else%>
+		<div class="col-md-4 pa-4 phn-mobile" style="padding-right: 82.25px">
+			<%= form_tag search_posts_path, { method: :get } do %>
+				<%= text_field_tag :search, nil, {placeholder: "search", class: 'fit-parent'} %>
+			<% end %>
+		</div>
+	<% end %>
+	<%= link_to resumes_path do %>
+		<div class="col-md-1 c-white ph-4 header-option-hover full-height text-center">
+			<div class="pv-4">
+				Resume
+			</div>
+		</div>
+	<% end %>
+	<%= link_to "#" do %>
+		<div class="col-md-1 ph-4 c-white header-option-hover text-center">
+			<div class="pv-4">
+				About
+			</div>
+		</div>
+	<% end %>
+	<%= link_to "#" do %>
+		<div id="Admin" class="col-md-1 ph-4 c-white header-option-hover text-center">
+			<div class="pv-4">
+				Admin
+			</div>
+		</div>
+	<% end %>
+</div>

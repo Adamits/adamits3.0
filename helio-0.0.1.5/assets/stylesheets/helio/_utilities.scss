@@ -1,0 +1,203 @@
+.hide-active {
+  display: block;
+}
+
+.show-active {
+  display: none;
+}
+
+.active {
+  .hide-active {
+    display: none;
+  }
+
+  .show-active {
+    display: block;
+  }
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
+}
+
+.z-5 {
+  z-index: 5;
+}
+
+.top {
+  top: 0px;
+}
+
+.left {
+  left: 0px;
+}
+
+.bottom {
+  bottom: 0px;
+}
+
+.right {
+  right: 0px;
+}
+
+.ntop {
+  top: 100%;
+}
+
+.nleft {
+  left: 100%;
+}
+
+.nbottom {
+  bottom: 100%;
+}
+
+.nright {
+  right: 100%;
+}
+
+.stc-xs {
+  position: static;
+}
+
+.rel-xs {
+  position: relative;
+}
+
+.abs-xs {
+  position: absolute;
+}
+
+.fix-xs {
+  position: fixed;
+}
+
+.pull-xs-left {
+  float: left;
+}
+
+.pull-xs-right {
+  float: right;
+}
+
+.text-xs-left {
+  text-align: left;
+}
+
+.text-xs-right {
+  text-align: right;
+}
+
+@media (min-width: $screen-sm-min) {
+  .stc-sm {
+    position: static;
+  }
+
+  .rel-sm {
+    position: relative;
+  }
+
+  .abs-sm {
+    position: absolute;
+  }
+
+  .fix-sm {
+    position: fixed;
+  }
+
+  .pull-sm-left {
+    float: left;
+  }
+
+  .pull-sm-right {
+    float: right;
+  }
+
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .stc-md {
+    position: static;
+  }
+
+  .rel-md {
+    position: relative;
+  }
+
+  .abs-md {
+    position: absolute;
+  }
+
+  .fix-md {
+    position: fixed;
+  }
+
+  .pull-md-left {
+    float: left;
+  }
+
+  .pull-md-right {
+    float: right;
+  }
+
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .stc-lg {
+    position: static;
+  }
+
+  .rel-lg {
+    position: relative;
+  }
+
+  .abs-lg {
+    position: absolute;
+  }
+
+  .fix-lg {
+    position: fixed;
+  }
+
+  .pull-lg-left {
+    float: left;
+  }
+
+  .pull-lg-right {
+    float: right;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}

@@ -1,0 +1,126 @@
+body {
+  background-color: #f7f7f7;
+}
+
+/** Header colors **/
+
+.bgc-header {
+  background-color: #525252;
+}
+
+.c-white {
+  color: #FFFFFF;
+}
+
+.bgc-white {
+  background-color: #FFFFFF;
+}
+
+.bc-5 {
+  border-color: #b8babc;
+}
+
+.header-option-hover:hover {
+  color: #525252;
+  background-color: #FFFFFF;
+}
+
+/*******************/
+
+.c-blue-link {
+  color: #0000FF !important;
+}
+
+.full-width, .full {
+  width: 100%;
+}
+
+.full-height, .full {
+  height: 100%;
+}
+
+.fit-parent {
+	display: block;
+	width: 100%;
+}
+
+#sign-in-screen {
+  background-color: #313131;
+  display: none;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity:.95;
+  position:fixed;
+  width: 100%;
+}
+
+#sign-in-popup {
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  margin-left: -125px;
+  padding-left: 30px;
+  top: 25%;
+  width: 250px;
+}
+
+#sign-in-close {
+  float: right;
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+.h-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pls {
+	padding-left: 15px;
+}
+
+.pll {
+	padding-left: 30px;
+}
+
+.phxxxl {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.pxxxl {
+	padding: 60px;
+}
+
+.bwl {
+	border-left: white 1px solid;
+}
+
+.bwr {
+	border-right: white 1px solid;
+}
+
+.bbb {
+	border-bottom: black 1px solid;
+}
+
+.highlight {
+  background-color: #FFFF00;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .phn-mobile {
+    padding: 0px !important;
+  }
+}
+
+.italicize {
+  font-style: italic;
+}

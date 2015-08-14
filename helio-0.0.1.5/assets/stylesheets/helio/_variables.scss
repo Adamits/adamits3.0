@@ -1,0 +1,105 @@
+$helio-shades:                #000000,
+                              #111111,
+                              #222222,
+                              #333333,
+                              #444444,
+                              #555555,
+                              #666666,
+                              #777777,
+                              #888888,
+                              #999999,
+                              #AAAAAA,
+                              #BBBBBB,
+                              #CCCCCC,
+                              #DDDDDD,
+                              #EEEEEE,
+                              #FFFFFF
+                              !default;
+
+$helio-spaces:                1px,
+                              5px,
+                              7.5px,
+                              10px,
+                              15px,
+                              20px,
+                              30px,
+                              40px,
+                              50px,
+                              60px,
+                              80px,
+                              100px
+                              !default;
+
+$helio-font-sizes:            10px,
+                              11px,
+                              12px,
+                              13px,
+                              14px,
+                              15px,
+                              16px,
+                              17px,
+                              18px,
+                              20px,
+                              22px,
+                              24px,
+                              26px,
+                              28px,
+                              32px,
+                              36px,
+                              42px,
+                              48px,
+                              54px,
+                              62px,
+                              72px,
+                              84px,
+                              100px
+                              !default;
+
+$helio-font-weights:          300,
+                              400,
+                              700
+                              !default;
+
+$helio-border-widths:         1px,
+                              2px,
+                              5px
+                              !default;
+
+$helio-border-radiuses:       2px,
+                              5px,
+                              10px,
+                              12px,
+                              20px,
+                              30px
+                              !default;
+
+$helio-fades:                 10,
+                              20,
+                              30,
+                              40,
+                              50,
+                              60,
+                              70,
+                              80,
+                              90
+                              !default;
+
+
+//== Media queries breakpoints
+//== Credit: Bootstrap
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Small screen / tablet
+$screen-sm-min:              768px !default;
+
+// Medium screen / desktop
+$screen-md-min:              992px !default;
+
+// Large screen / wide desktop
+$screen-lg-min:              1200px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

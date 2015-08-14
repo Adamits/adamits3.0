@@ -1,8 +1,23 @@
-AdamitsGov::Application.routes.draw do
-  devise_for :users
-  resources :posts
+Rails.application.routes.draw do
 
-  resource :about, :only => [:show], :controller => 'about'
-  resource :resume, :only => [:show], :controller => 'resume'
-  root to: "home#index"
+  devise_for :users, :skip => [:registrations]
+
+  root to: 'posts#index'
+
+  resources :posts, only: ['index', 'show'] do
+  	collection do
+  	 get :search
+  	end
+  end
+
+  namespace :admin do
+    resources :posts do
+      collection do
+        get :update_all
+      end
+    end
+  end
+
+  resources :resumes, only: ['index']
+
 end

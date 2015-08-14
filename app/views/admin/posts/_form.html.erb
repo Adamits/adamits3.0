@@ -1,0 +1,11 @@
+<%= form_for [:admin, @post] do |f| %>
+	<div class="pa-4">
+		<%= f.text_field :title, :placeholder => "Title", class: "full-width bwa-1 bs-sld pa-2" %>
+	</div>
+	<div class="pa-4">
+		<%= f.text_area :content, :placeholder => "Write your post here...", :rows => "7", class: "full-width bwa-1 bs-sld pa-2" %>
+	</div>
+	<div class="pa-4">
+		<%= f.submit "Submit", class: "btn btn-primary" %>
+	</div>
+<% end %>

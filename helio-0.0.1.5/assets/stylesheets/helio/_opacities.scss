@@ -1,0 +1,24 @@
+@mixin opacities($name, $integer) {
+  .opa-#{$name},
+  .opa-#{$name}-hover:hover,
+  .active .opa-#{$name}-active,
+  .active .opa-#{$name}-active:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$integer)";
+    filter: alpha(opacity=$integer);
+    -moz-opacity: $integer / 100;
+    -khtml-opacity: $integer / 100;
+    opacity: $integer / 100;
+  }
+}
+
+
+
+@include opacities(0, 0);
+@include opacities(a, 100);
+
+@for $fade-index from 1 through length($helio-fades) {
+  $name: $fade-index;
+  $value: nth($helio-fades, $fade-index);
+
+  @include opacities($name, $value);
+}
