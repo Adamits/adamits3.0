@@ -46,6 +46,7 @@ gem 'helio'
 
 group :development, :test do
   gem 'mysql2'
+  gem 'sqlite3'
 end
 
 group :production do
