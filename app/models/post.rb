@@ -29,7 +29,9 @@ class Post < ActiveRecord::Base
     @tags_object.get_weighted_tags.each do |tag, term_score|
       @tag = Tag.where(tag: tag).last || Tag.new(tag: tag)
       if @tag.save
-        @posts_tag = self.posts_tags.create(tag_id: @tag.id, post_id: self.id, term_score: term_score)
+        @posts_tag = self.posts_tags.where(tag: tag, post: self).last || self.posts_tags.create(tag_id: @tag.id, post_id: self.id)
+        @posts_tag.term_score = term_score
+        @posts_tag.save
       end
     end
   end

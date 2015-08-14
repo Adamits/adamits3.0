@@ -46,10 +46,7 @@ class Admin::PostsController < ApplicationController
   def update_all
     @posts = Post.all
     @posts.each do |post|
-      @tag_post = [post]
-      if post.delete_all_tags_and_posts_tags
-        post.get_weighted_tags
-      end
+      post.get_weighted_tags
     end
     redirect_to root_path
   end
