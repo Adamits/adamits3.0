@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407004130) do
+ActiveRecord::Schema.define(version: 20150717183257) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 20150407004130) do
     t.datetime "updated_at"
   end
 
-  create_table "posts_tags", id: false, force: true do |t|
+  create_table "posts_tags", force: true do |t|
     t.integer "post_id"
     t.integer "tag_id"
+    t.float   "term_score"
   end
 
   add_index "posts_tags", ["post_id"], name: "index_posts_tags_on_post_id"
@@ -30,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150407004130) do
 
   create_table "tags", force: true do |t|
     t.string "tag"
-    t.float  "term_score"
   end
 
   create_table "users", force: true do |t|

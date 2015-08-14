@@ -8,8 +8,9 @@
 
 $(document).ready(function () {
 	$(".js-term-extraction").each(function() {
+		original_content = $(this).find($(".js-term-extraction-content")).text();
 	  $(this).find($(".js-extract-button")).click(function() {
-			$(this).closest($(".js-term-extraction")).find($(".post-content")).each(function() {
+			$(this).closest($(".js-term-extraction")).find($(".js-term-extraction-content")).each(function() {
 				if (document.getElementsByClassName('highlight')[0] != 'undefined') {
 					var terms = $(this).data("extracted-terms"); //10 highest weighted terms
 					var new_content = "";
@@ -30,6 +31,13 @@ $(document).ready(function () {
 				$(this).html(new_content);
 				}
 			});
+			$(this).addClass("hide");
+			$(this).closest($(".js-term-extraction")).find($(".js-clear-extract-button")).removeClass("hide");
+		});
+		$(this).find($(".js-clear-extract-button")).click(function() {
+			$(this).closest($(".js-term-extraction")).find($(".js-term-extraction-content")).html(original_content);
+			$(this).addClass("hide");
+			$(this).closest($(".js-term-extraction")).find($(".js-extract-button")).removeClass("hide");
 		});
 	});
 });

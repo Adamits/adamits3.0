@@ -1,0 +1,48 @@
+@for $font-size-index from 1 through length($helio-font-sizes) {
+  $name: $font-size-index;
+  $value: nth($helio-font-sizes, $font-size-index);
+
+  .fs-#{$name},
+  .fs-xs-#{$name},
+  .fs-#{$name}-hover:hover,
+  .fs-xs-#{$name}-hover:hover,
+  .active .fs-#{$name}-active,
+  .active .fs-xs-#{$name}-active {
+    font-size: $value;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .fs-sm-#{$name},
+    .fs-sm-#{$name}-hover:hover,
+    .active .fs-sm-#{$name}-active {
+      font-size: $value;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .fs-md-#{$name},
+    .fs-md-#{$name}-hover:hover,
+    .active .fs-md-#{$name}-active {
+      font-size: $value;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .fs-lg-#{$name},
+    .fs-lg-#{$name}-hover:hover,
+    .active .fs-lg-#{$name}-active {
+      font-size: $value;
+    }
+  }
+}
+
+@for $font-weight-index from 1 through length($helio-font-weights) {
+  $name: $font-weight-index;
+  $value: nth($helio-font-weights, $font-weight-index);
+
+  .fw-#{$name},
+  .fw-#{$name}-hover:hover,
+  .active .fw-#{$name}-active {
+    font-weight: $value;
+  }
+}

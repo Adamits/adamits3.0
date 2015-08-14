@@ -38,8 +38,12 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'less-rails-bootstrap'
+gem 'bootstrap-sass'
+
+gem 'autoprefixer-rails'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'devise'
+
+gem 'helio'

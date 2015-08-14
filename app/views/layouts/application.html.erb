@@ -7,23 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="header-bar" class="phxxxl">
-    <%= render partial: "shared/header" %>
-  </div>
+  <%= render partial: "shared/header" %>
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% end %>
   <% if alert %>
     <p class="alert"><%= alert %></p>
   <% end %>
-	<div id="main-content" class="phxxxl">
-		<div class="col-md-1">
-		</div>
-		<div class="col-md-10">
-			<%= yield %>
-		</div>
-		<div class="col-md-1">
-		</div>
+	<div class="container phs">
+		<%= yield %>
 	</div>
 	<!-- POPUP SIGN-IN -->
   <div id="sign-in-screen">

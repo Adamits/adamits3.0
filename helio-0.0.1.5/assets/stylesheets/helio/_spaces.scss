@@ -1,0 +1,226 @@
+@mixin paddings($name, $value) {
+  .pt-#{$name}, .pt-xs-#{$name},
+  .pv-#{$name}, .pv-xs-#{$name},
+  .pa-#{$name}, .pa-xs-#{$name},
+  .pt-#{$name}-hover:hover, .pt-xs-#{$name}-hover:hover,
+  .pv-#{$name}-hover:hover, .pv-xs-#{$name}-hover:hover,
+  .pa-#{$name}-hover:hover, .pa-xs-#{$name}-hover:hover,
+  .active .pt-#{$name}-active, .active .pt-xs-#{$name}-active,
+  .active .pv-#{$name}-active, .active .pv-xs-#{$name}-active,
+  .active .pa-#{$name}-active, .active .pa-xs-#{$name}-active,
+  .pt-#{$name}-plus + .pt-#{$name}-plus, .pt-xs-#{$name}-plus + .pt-xs-#{$name}-plus {
+    padding-top: $value;
+  }
+
+  .pl-#{$name}, .pl-xs-#{$name},
+  .ph-#{$name}, .ph-xs-#{$name},
+  .pa-#{$name}, .pa-xs-#{$name},
+  .pl-#{$name}-hover:hover, .pl-xs-#{$name}-hover:hover,
+  .ph-#{$name}-hover:hover, .ph-xs-#{$name}-hover:hover,
+  .pa-#{$name}-hover:hover, .pa-xs-#{$name}-hover:hover,
+  .active .pl-#{$name}-active, .active .pl-xs-#{$name}-active,
+  .active .ph-#{$name}-active, .active .ph-xs-#{$name}-active,
+  .active .pa-#{$name}-active, .active .pa-xs-#{$name}-active,
+  .pl-#{$name}-plus + .pl-#{$name}-plus, .pl-xs-#{$name}-plus + .pl-xs-#{$name}-plus {
+    padding-left: $value;
+  }
+
+  .pb-#{$name}, .pb-xs-#{$name},
+  .pv-#{$name}, .pv-xs-#{$name},
+  .pa-#{$name}, .pa-xs-#{$name},
+  .pb-#{$name}-hover:hover, .pb-xs-#{$name}-hover:hover,
+  .pv-#{$name}-hover:hover, .pv-xs-#{$name}-hover:hover,
+  .pa-#{$name}-hover:hover, .pa-xs-#{$name}-hover:hover,
+  .active .pb-#{$name}-active, .active .pb-xs-#{$name}-active,
+  .active .pv-#{$name}-active, .active .pv-xs-#{$name}-active,
+  .active .pa-#{$name}-active, .active .pa-xs-#{$name}-active {
+    padding-bottom: $value;
+  }
+
+  .pr-#{$name}, .pr-xs-#{$name},
+  .ph-#{$name}, .ph-xs-#{$name},
+  .pa-#{$name}, .pa-xs-#{$name},
+  .pr-#{$name}-hover:hover,
+  .ph-#{$name}-hover:hover,
+  .pa-#{$name}-hover:hover,
+  .active .pr-#{$name}-active,
+  .active .ph-#{$name}-active,
+  .active .pa-#{$name}-active,
+  .pr-#{$name}-plus + .pr-#{$name}-plus {
+    padding-right: $value;
+  }
+}
+
+@mixin margins($name, $value) {
+  .mt-#{$name},
+  .mv-#{$name},
+  .ma-#{$name},
+  .mt-#{$name}-hover:hover,
+  .mv-#{$name}-hover:hover,
+  .ma-#{$name}-hover:hover,
+  .active .mt-#{$name}-active,
+  .active .mv-#{$name}-active,
+  .active .ma-#{$name}-active,
+  .mt-#{$name}-plus + .mt-#{$name}-plus {
+    margin-top: $value;
+  }
+
+  .ml-#{$name},
+  .mh-#{$name},
+  .ma-#{$name},
+  .ml-#{$name}-hover:hover,
+  .mh-#{$name}-hover:hover,
+  .ma-#{$name}-hover:hover,
+  .active .ml-#{$name}-active,
+  .active .mh-#{$name}-active,
+  .active .ma-#{$name}-active,
+  .ml-#{$name}-plus + .ml-#{$name}-plus {
+    margin-left: $value;
+  }
+
+  .mb-#{$name},
+  .mv-#{$name},
+  .ma-#{$name},
+  .mb-#{$name}-hover:hover,
+  .mv-#{$name}-hover:hover,
+  .ma-#{$name}-hover:hover,
+  .active .mb-#{$name}-active,
+  .active .mv-#{$name}-active,
+  .active .ma-#{$name}-active {
+    margin-bottom: $value;
+  }
+
+  .mr-#{$name},
+  .mh-#{$name},
+  .ma-#{$name},
+  .mr-#{$name}-hover:hover,
+  .mh-#{$name}-hover:hover,
+  .ma-#{$name}-hover:hover,
+  .active .mr-#{$name}-active,
+  .active .mh-#{$name}-active,
+  .active .ma-#{$name}-active,
+  .mr-#{$name}-plus + .mr-#{$name}-plus {
+    margin-right: $value;
+  }
+}
+
+@mixin negative-margins($name, $value) {
+  .nmt-#{$name},
+  .nmv-#{$name},
+  .nma-#{$name},
+  .nmt-#{$name}-hover:hover,
+  .nmv-#{$name}-hover:hover,
+  .nma-#{$name}-hover:hover,
+  .active .nmt-#{$name}-active,
+  .active .nmv-#{$name}-active,
+  .active .nma-#{$name}-active,
+  .nmt-#{$name}-plus + .nmt-#{$name}-plus {
+    margin-top: -$value;
+  }
+
+  .nml-#{$name},
+  .nmh-#{$name},
+  .nma-#{$name},
+  .nml-#{$name}-hover:hover,
+  .nmh-#{$name}-hover:hover,
+  .nma-#{$name}-hover:hover,
+  .active .nml-#{$name}-active,
+  .active .nmh-#{$name}-active,
+  .active .nma-#{$name}-active,
+  .nml-#{$name}-plus + .nml-#{$name}-plus {
+    margin-left: -$value;
+  }
+
+  .nmb-#{$name},
+  .nmv-#{$name},
+  .nma-#{$name},
+  .nmb-#{$name}-hover:hover,
+  .nmv-#{$name}-hover:hover,
+  .nma-#{$name}-hover:hover,
+  .active .nmb-#{$name}-active,
+  .active .nmv-#{$name}-active,
+  .active .nma-#{$name}-active {
+    margin-bottom: -$value;
+  }
+
+  .nmr-#{$name},
+  .nmh-#{$name},
+  .nma-#{$name},
+  .nmr-#{$name}-hover:hover,
+  .nmh-#{$name}-hover:hover,
+  .nma-#{$name}-hover:hover,
+  .active .nmr-#{$name}-active,
+  .active .nmh-#{$name}-active,
+  .active .nma-#{$name}-active,
+  .nmr-#{$name}-plus + .mmr-#{$name}-plus {
+    margin-right: -$value;
+  }
+}
+
+@mixin dimensions($name, $value) {
+  .dv-#{$name},
+  .da-#{$name},
+  .dv-#{$name}-hover:hover,
+  .da-#{$name}-hover:hover,
+  .active .dv-#{$name}-active,
+  .active .da-#{$name}-active {
+    height: $value;
+  }
+
+  .dh-#{$name},
+  .da-#{$name},
+  .dh-#{$name}-hover:hover,
+  .da-#{$name}-hover:hover,
+  .active .dh-#{$name}-active,
+  .active .da-#{$name}-active {
+    width: $value;
+  }
+}
+
+@mixin line-heights($name, $value) {
+  .lh-#{$name},
+  .lh-#{$name}-hover:hover,
+  .active .lh-#{$name}-active {
+    line-height: $value;
+  }
+}
+
+@include dimensions(0, 0px);
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include dimensions($name, $value);
+}
+
+@include line-heights(0, 0px);
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include line-heights($name, $value);
+}
+
+@include paddings(0, 0px);
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include paddings($name, $value);
+}
+
+@include margins(a, auto);
+@include margins(0, 0px);
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include margins($name, $value);
+}
+
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include negative-margins($name, $value);
+}

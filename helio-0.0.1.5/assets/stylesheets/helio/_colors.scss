@@ -1,0 +1,88 @@
+@mixin colors($name, $value) {
+  .c-#{$name}, .c-xs-#{$name},
+  .c-#{$name}-hover:hover, .c-xs-#{$name}-hover:hover,
+  .active .c-#{$name}-active, .active .c-xs-#{$name}-active {
+    color: $value;
+  }
+
+  .bg-#{$name}, .bg-xs-#{$name},
+  .bg-#{$name}-hover:hover, .bg-xs-#{$name}-hover:hover,
+  .active .bg-#{$name}-active, .active .bg-xs-#{$name}-active {
+    background-color: $value;
+  }
+
+  .bc-#{$name}, .bc-xs-#{$name},
+  .bc-#{$name}-hover:hover, .bc-xs-#{$name}-hover:hover,
+  .active .bc-#{$name}-active, .active .bc-xs-#{$name}-active {
+    border-color: $value;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .c-sm-#{$name},
+    .c-sm-#{$name}-hover:hover,
+    .active .c-sm-#{$name}-active {
+      color: $value;
+    }
+
+    .bg-sm-#{$name},
+    .bg-sm-#{$name}-hover:hover,
+    .active .bg-sm-#{$name}-active {
+      background-color: $value;
+    }
+
+    .bc-sm-#{$name},
+    .bc-sm-#{$name}-hover:hover,
+    .active .bc-sm-#{$name}-active {
+      border-color: $value;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .c-md-#{$name},
+    .c-md-#{$name}-hover:hover,
+    .active .c-md-#{$name}-active {
+      color: $value;
+    }
+
+    .bg-md-#{$name},
+    .bg-md-#{$name}-hover:hover,
+    .active .bg-md-#{$name}-active {
+      background-color: $value;
+    }
+
+    .bc-md-#{$name},
+    .bc-md-#{$name}-hover:hover,
+    .active .bc-md-#{$name}-active {
+      border-color: $value;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .c-lg-#{$name},
+    .c-lg-#{$name}-hover:hover,
+    .active .c-lg-#{$name}-active {
+      color: $value;
+    }
+
+    .bg-lg-#{$name},
+    .bg-lg-#{$name}-hover:hover,
+    .active .bg-lg-#{$name}-active {
+      background-color: $value;
+    }
+
+    .bc-lg-#{$name},
+    .bc-lg-#{$name}-hover:hover,
+    .active .bc-lg-#{$name}-active {
+      border-color: $value;
+    }
+  }
+}
+
+@include colors(n, none);
+
+@for $color-index from 1 through length($helio-shades) {
+  $color-name: $color-index - 1;
+  $color-value: nth($helio-shades, $color-index);
+
+  @include colors(#{$color-name}, #{$color-value});
+}

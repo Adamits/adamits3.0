@@ -1,51 +1,43 @@
-<div class="col-md-8 col-sm-8">
-	<div class="row">
-	 <b><%= @post.title %></b>
-	</div>
-  <div class="row">
-  <div class="js-term-extraction">
-    <div class="js-extract-button">
-      Extract
+<div class="row nmh-4">
+  <div class="col-sm-8 col-sm-offset-2 ph-4">
+    <h1 class="text-center"><%= @post.title %></h1>
+    <div class="js-term-extraction">
+      <div class="js-term-extraction-content pv-6" data-extracted-terms="<%= @extracted_terms %>">
+    	 <%= @post.content %></br>
+      </div>
+       <div class="js-extract-button btn btn-default">
+        Extract Terms
+      </div>
+      <div class="js-clear-extract-button btn btn-default hide">
+        Clear Highlight
+      </div>
     </div>
-    <div class="post-content" data-extracted-terms="<%= @extracted_terms %>">
-  	 <%= @post.content %></br>
-    </div>
-  </div>
-  	<% if current_user && current_user.admin %>
-  	  <div class="row">
-  	    <div class="col-md-2">
-  	      <b>Tag</b>
-  	    </div>
-  	    <div class="col-md-2">
-  	      <b>Term Score</b>
-  	    </div>
-  	  </div>
-      <% @tags_hash.each do |tag, term_score| %>
-        <div class="row">
-          <div class="col-md-2">
-            <%= tag %> </br>
-          </div>
-          <div class="col-md-2">
-            <%= term_score %> </br>
-          </div>
-        </div>
-      <% end %>
-      </br>
-      <%= link_to edit_admin_post_path do %>
-        Edit
-      <% end %>
-    <% end %>
   </div>
 </div>
-<div class="col-md-4 col-sm-4">
-  <!--<div class="row">
-    <div class="bbb">
-     <b>Extracted Terms</b>
+<% if current_user && current_user.admin %>
+  <div class="row nmh-4">
+    <div class="col-sm-2 col-sm-offset-2 ph-4">
+      <b>Tag</b>
+    </div>
+    <div class="col-sm-2 ph-4">
+      <b>Term Score</b>
     </div>
   </div>
-  <% @tags_hash.first(10).each do |tag, term_score| %>
-    <div clas="row">
-      <%= tag %>
+  <% @tags_hash.each do |tag, term_score| %>
+    <div class="row nmh-4">
+       <div class="col-sm-2 col-sm-offset-2 ph-4">
+        <%= tag %> </br>
+      </div>
+      <div class="col-sm-2 ph-4">
+        <%= term_score %> </br>
+      </div>
     </div>
-  <% end %> -->
-</div>
+  <% end %>
+  </br>
+  <%= link_to edit_admin_post_path, class: "btn btn-success" do %>
+    Edit
+  <% end %>
+  <%= link_to admin_post_path, method: :delete, class: "btn btn-danger" do %>
+    Delete
+  <% end %>
+<% end %>

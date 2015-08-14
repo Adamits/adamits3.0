@@ -1,0 +1,312 @@
+@mixin border-widths($name, $value) {
+  .bwt-#{$name}, .bwt-xs-#{$name},
+  .bwv-#{$name}, .bwv-xs-#{$name},
+  .bwa-#{$name}, .bwa-xs-#{$name},
+  .bwt-#{$name}-hover:hover, .bwt-xs-#{$name}-hover:hover,
+  .bwv-#{$name}-hover:hover, .bwv-xs-#{$name}-hover:hover,
+  .bwa-#{$name}-hover:hover, .bwa-xs-#{$name}-hover:hover,
+  .active .bwt-#{$name}-active, .active .bwt-xs-#{$name}-active,
+  .active .bwv-#{$name}-active, .active .bwv-xs-#{$name}-active,
+  .active .bwa-#{$name}-active, .active .bwa-xs-#{$name}-active,
+  .bwt-#{$name}-plus + .bwt-#{$name}-plus, .bwt-xs-#{$name}-plus + .bwt-xs-#{$name}-plus {
+    border-top-width: $value;
+  }
+
+  .bwl-#{$name}, .bwl-xs-#{$name},
+  .bwh-#{$name}, .bwh-xs-#{$name},
+  .bwa-#{$name}, .bwa-xs-#{$name},
+  .bwl-#{$name}-hover:hover, .bwl-xs-#{$name}-hover:hover,
+  .bwh-#{$name}-hover:hover, .bwh-xs-#{$name}-hover:hover,
+  .bwa-#{$name}-hover:hover, .bwa-xs-#{$name}-hover:hover,
+  .active .bwl-#{$name}-active, .active .bwl-xs-#{$name}-active,
+  .active .bwh-#{$name}-active, .active .bwh-xs-#{$name}-active,
+  .active .bwa-#{$name}-active, .active .bwa-xs-#{$name}-active,
+  .bwl-#{$name}-plus + .bwl-#{$name}-plus, .bwl-xs-#{$name}-plus + .bwl-xs-#{$name}-plus {
+    border-left-width: $value;
+  }
+
+  .bwb-#{$name}, .bwb-xs-#{$name},
+  .bwv-#{$name}, .bwv-xs-#{$name},
+  .bwa-#{$name}, .bwa-xs-#{$name},
+  .bwb-#{$name}-hover:hover, .bwb-xs-#{$name}-hover:hover,
+  .bwv-#{$name}-hover:hover, .bwv-xs-#{$name}-hover:hover,
+  .bwa-#{$name}-hover:hover, .bwa-xs-#{$name}-hover:hover,
+  .active .bwb-#{$name}-active, .active .bwb-xs-#{$name}-active,
+  .active .bwv-#{$name}-active, .active .bwv-xs-#{$name}-active,
+  .active .bwa-#{$name}-active, .active .bwa-xs-#{$name}-active {
+    border-bottom-width: $value;
+  }
+
+  .bwr-#{$name}, .bwr-xs-#{$name},
+  .bwh-#{$name}, .bwh-xs-#{$name},
+  .bwa-#{$name}, .bwa-xs-#{$name},
+  .bwr-#{$name}-hover:hover, .bwr-xs-#{$name}-hover:hover,
+  .bwh-#{$name}-hover:hover, .bwh-xs-#{$name}-hover:hover,
+  .bwa-#{$name}-hover:hover, .bwa-xs-#{$name}-hover:hover,
+  .active .bwr-#{$name}-active, .active .bwr-xs-#{$name}-active,
+  .active .bwh-#{$name}-active, .active .bwh-xs-#{$name}-active,
+  .active .bwa-#{$name}-active, .active .bwa-xs-#{$name}-active,
+  .bwr-#{$name}-plus + .bwr-#{$name}-plus, .bwr-xs-#{$name}-plus + .bwr-xs-#{$name}-plus {
+    border-right-width: $value;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .bwt-sm-#{$name},
+    .bwv-sm-#{$name},
+    .bwa-sm-#{$name},
+    .bwt-sm-#{$name}-hover:hover,
+    .bwv-sm-#{$name}-hover:hover,
+    .bwa-sm-#{$name}-hover:hover,
+    .active .bwt-sm-#{$name}-active,
+    .active .bwv-sm-#{$name}-active,
+    .active .bwa-sm-#{$name}-active,
+    .bwt-sm-#{$name}-plus + .bwt-sm-#{$name}-plus {
+      border-top-width: $value;
+    }
+
+    .bwl-sm-#{$name},
+    .bwh-sm-#{$name},
+    .bwa-sm-#{$name},
+    .bwl-sm-#{$name}-hover:hover,
+    .bwh-sm-#{$name}-hover:hover,
+    .bwa-sm-#{$name}-hover:hover,
+    .active .bwl-sm-#{$name}-active,
+    .active .bwh-sm-#{$name}-active,
+    .active .bwa-sm-#{$name}-active,
+    .bwl-sm-#{$name}-plus + .bwl-sm-#{$name}-plus {
+      border-left-width: $value;
+    }
+
+    .bwb-sm-#{$name},
+    .bwv-sm-#{$name},
+    .bwa-sm-#{$name},
+    .bwb-sm-#{$name}-hover:hover,
+    .bwv-sm-#{$name}-hover:hover,
+    .bwa-sm-#{$name}-hover:hover,
+    .active .bwb-sm-#{$name}-active,
+    .active .bwv-sm-#{$name}-active,
+    .active .bwa-sm-#{$name}-active {
+      border-bottom-width: $value;
+    }
+
+    .bwr-sm-#{$name},
+    .bwh-sm-#{$name},
+    .bwa-sm-#{$name},
+    .bwr-sm-#{$name}-hover:hover,
+    .bwh-sm-#{$name}-hover:hover,
+    .bwa-sm-#{$name}-hover:hover,
+    .active .bwr-sm-#{$name}-active,
+    .active .bwh-sm-#{$name}-active,
+    .active .bwa-sm-#{$name}-active,
+    .bwr-sm-#{$name}-plus + .bwr-sm-#{$name}-plus {
+      border-right-width: $value;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .bwt-md-#{$name},
+    .bwv-md-#{$name},
+    .bwa-md-#{$name},
+    .bwt-md-#{$name}-hover:hover,
+    .bwv-md-#{$name}-hover:hover,
+    .bwa-md-#{$name}-hover:hover,
+    .active .bwt-md-#{$name}-active,
+    .active .bwv-md-#{$name}-active,
+    .active .bwa-md-#{$name}-active,
+    .bwt-md-#{$name}-plus + .bwt-md-#{$name}-plus {
+      border-top-width: $value;
+    }
+
+    .bwl-md-#{$name},
+    .bwh-md-#{$name},
+    .bwa-md-#{$name},
+    .bwl-md-#{$name}-hover:hover,
+    .bwh-md-#{$name}-hover:hover,
+    .bwa-md-#{$name}-hover:hover,
+    .active .bwl-md-#{$name}-active,
+    .active .bwh-md-#{$name}-active,
+    .active .bwa-md-#{$name}-active,
+    .bwl-md-#{$name}-plus + .bwl-md-#{$name}-plus {
+      border-left-width: $value;
+    }
+
+    .bwb-md-#{$name},
+    .bwv-md-#{$name},
+    .bwa-md-#{$name},
+    .bwb-md-#{$name}-hover:hover,
+    .bwv-md-#{$name}-hover:hover,
+    .bwa-md-#{$name}-hover:hover,
+    .active .bwb-md-#{$name}-active,
+    .active .bwv-md-#{$name}-active,
+    .active .bwa-md-#{$name}-active {
+      border-bottom-width: $value;
+    }
+
+    .bwr-md-#{$name},
+    .bwh-md-#{$name},
+    .bwa-md-#{$name},
+    .bwr-md-#{$name}-hover:hover,
+    .bwh-md-#{$name}-hover:hover,
+    .bwa-md-#{$name}-hover:hover,
+    .active .bwr-md-#{$name}-active,
+    .active .bwh-md-#{$name}-active,
+    .active .bwa-md-#{$name}-active,
+    .bwr-md-#{$name}-plus + .bwr-md-#{$name}-plus {
+      border-right-width: $value;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .bwt-lg-#{$name},
+    .bwv-lg-#{$name},
+    .bwa-lg-#{$name},
+    .bwt-lg-#{$name}-hover:hover,
+    .bwv-lg-#{$name}-hover:hover,
+    .bwa-lg-#{$name}-hover:hover,
+    .active .bwt-lg-#{$name}-active,
+    .active .bwv-lg-#{$name}-active,
+    .active .bwa-lg-#{$name}-active,
+    .bwt-lg-#{$name}-plus + .bwt-lg-#{$name}-plus {
+      border-top-width: $value;
+    }
+
+    .bwl-lg-#{$name},
+    .bwh-lg-#{$name},
+    .bwa-lg-#{$name},
+    .bwl-lg-#{$name}-hover:hover,
+    .bwh-lg-#{$name}-hover:hover,
+    .bwa-lg-#{$name}-hover:hover,
+    .active .bwl-lg-#{$name}-active,
+    .active .bwh-lg-#{$name}-active,
+    .active .bwa-lg-#{$name}-active,
+    .bwl-lg-#{$name}-plus + .bwl-lg-#{$name}-plus {
+      border-left-width: $value;
+    }
+
+    .bwb-lg-#{$name},
+    .bwv-lg-#{$name},
+    .bwa-lg-#{$name},
+    .bwb-lg-#{$name}-hover:hover,
+    .bwv-lg-#{$name}-hover:hover,
+    .bwa-lg-#{$name}-hover:hover,
+    .active .bwb-lg-#{$name}-active,
+    .active .bwv-lg-#{$name}-active,
+    .active .bwa-lg-#{$name}-active {
+      border-bottom-width: $value;
+    }
+
+    .bwr-lg-#{$name},
+    .bwh-lg-#{$name},
+    .bwa-lg-#{$name},
+    .bwr-lg-#{$name}-hover:hover,
+    .bwh-lg-#{$name}-hover:hover,
+    .bwa-lg-#{$name}-hover:hover,
+    .active .bwr-lg-#{$name}-active,
+    .active .bwh-lg-#{$name}-active,
+    .active .bwa-lg-#{$name}-active,
+    .bwr-lg-#{$name}-plus + .bwr-lg-#{$name}-plus {
+      border-right-width: $value;
+    }
+  }
+}
+
+@mixin border-radiuses($name, $value) {
+  .brtl-#{$name},
+  .brt-#{$name},
+  .brl-#{$name},
+  .bra-#{$name},
+  .brtl-#{$name}-hover:hover,
+  .brt-#{$name}-hover:hover,
+  .brl-#{$name}-hover:hover,
+  .bra-#{$name}-hover:hover,
+  .active .brtl-#{$name}-active,
+  .active .brt-#{$name}-active,
+  .active .brl-#{$name}-active,
+  .active .bra-#{$name}-active {
+    -webkit-border-top-left-radius: $value;
+    -moz-border-radius-topleft: $value;
+    border-top-left-radius: $value;
+  }
+  .brtr-#{$name},
+  .brt-#{$name},
+  .brr-#{$name},
+  .bra-#{$name},
+  .brtr-#{$name}-hover:hover,
+  .brt-#{$name}-hover:hover,
+  .brr-#{$name}-hover:hover,
+  .bra-#{$name}-hover:hover,
+  .active .brtr-#{$name}-active,
+  .active .brt-#{$name}-active,
+  .active .brr-#{$name}-active,
+  .active .bra-#{$name}-active {
+    -webkit-border-top-right-radius: $value;
+    -moz-border-radius-topright: $value;
+    border-top-right-radius: $value;
+  }
+  .brbl-#{$name},
+  .brb-#{$name},
+  .brl-#{$name},
+  .bra-#{$name},
+  .brbl-#{$name}-hover:hover,
+  .brb-#{$name}-hover:hover,
+  .brl-#{$name}-hover:hover,
+  .bra-#{$name}-hover:hover,
+  .active .brbl-#{$name}-active,
+  .active .brb-#{$name}-active,
+  .active .brl-#{$name}-active,
+  .active .bra-#{$name}-active {
+    -webkit-border-bottom-left-radius: $value;
+    -moz-border-radius-bottomleft: $value;
+    border-bottom-left-radius: $value;
+  }
+  .brbr-#{$name},
+  .brb-#{$name},
+  .brr-#{$name},
+  .bra-#{$name},
+  .brbr-#{$name}-hover:hover,
+  .brb-#{$name}-hover:hover,
+  .brr-#{$name}-hover:hover,
+  .bra-#{$name}-hover:hover,
+  .active .brbr-#{$name}-active,
+  .active .brb-#{$name}-active,
+  .active .brr-#{$name}-active,
+  .active .bra-#{$name}-active {
+    -webkit-border-bottom-right-radius: $value;
+    -moz-border-radius-bottomright: $value;
+    border-bottom-right-radius: $value;
+  }
+}
+
+.bs-sld,
+.bs-sld-hover:hover,
+.active .bs-sld-active {
+  border-style: solid;
+}
+
+.bs-dtd,
+.bs-dtd-hover:hover,
+.active .bs-dtd-active {
+  border-style: dotted;
+}
+
+.bs-dsd,
+.bs-dsd-hover:hover,
+.active .bs-dsd-active {
+  border-style: dashed;
+}
+
+@include border-widths(0, 0px);
+@for $border-width-index from 1 through length($helio-border-widths) {
+  $name: $border-width-index;
+  $value: nth($helio-border-widths, $border-width-index);
+
+  @include border-widths(#{$name}, #{$value});
+}
+
+@include border-radiuses(0, 0px);
+@for $space-index from 1 through length($helio-spaces) {
+  $name: $space-index;
+  $value: nth($helio-spaces, $space-index);
+
+  @include border-radiuses($name, $value);
+}

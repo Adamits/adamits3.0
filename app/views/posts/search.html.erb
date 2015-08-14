@@ -1,0 +1,23 @@
+<% if @posts_tags.any? %>
+  <% @posts_and_scores_hash.reverse.each do |post, score| %>
+  	<div class="row mt-8 nmh-3">
+  		<div class="col-md-6 col-md-offset-2 ph-3">
+  			<%= link_to post_path(post) do %>
+          <div class="fw-3">
+            <%= post.title %>
+          </div>
+          <%= post.content[0, 100] %>
+        <% end %>
+  		</div>
+      <% if current_user && current_user.admin %>
+  		  <%= @posts_and_tags_hash[post] %>
+      <% end %>
+  	</div>
+  <% end %>
+<% else %>
+  <div class="pa-8">
+    <div class="fw-3">
+      No content matches your search, BROTHER!
+    </div>
+  </div>
+<% end %>

@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  match 'users/sign_up' => redirect('/404.html'), via: :all
+  devise_for :users, :skip => [:registrations]
+
   root to: 'posts#index'
-  resources :posts, only: ['index', 'show']
-  resources :searches, only: ['show']
-  namespace :admin do
-    resources :posts
+
+  resources :posts, only: ['index', 'show'] do
+  	collection do
+  	 get :search
+  	end
   end
-  
+
+  namespace :admin do
+    resources :posts do
+      collection do
+        get :update_all
+      end
+    end
+  end
+
+  resources :resumes, only: ['index']
+
 end
