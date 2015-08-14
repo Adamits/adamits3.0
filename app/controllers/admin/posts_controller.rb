@@ -23,9 +23,12 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id])
     @tag_post = [@post]
     if @post.update_attributes(post_params)
-      @post.delete_all_tags_and_posts_tags
-      @post.get_weighted_tags
-      redirect_to post_path(@post)
+      if @post.delete_all_tags_and_posts_tags
+        @post.get_weighted_tags
+        redirect_to post_path(@post)
+      else
+        render :edit
+      end
     else
       render :edit
     end
@@ -44,8 +47,9 @@ class Admin::PostsController < ApplicationController
     @posts = Post.all
     @posts.each do |post|
       @tag_post = [post]
-      post.delete_all_tags_and_posts_tags
-      post.get_weighted_tags
+      if post.delete_all_tags_and_posts_tags
+        post.get_weighted_tags
+      end
     end
     redirect_to root_path
   end

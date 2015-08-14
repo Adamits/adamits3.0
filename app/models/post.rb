@@ -25,7 +25,7 @@ class Post < ActiveRecord::Base
   end
 
   def get_weighted_tags
-    @tags_object = TfIdf::WeightedTags.new(all_posts, self.title + self.content)
+    @tags_object = TfIdf::WeightedTags.new(all_posts, "#{self.title} #{self.content}")
     @tags_object.get_weighted_tags.each do |tag, term_score|
       @tag = Tag.where(tag: tag).last || Tag.new(tag: tag)
       if @tag.save
@@ -35,10 +35,18 @@ class Post < ActiveRecord::Base
   end
 
   def delete_all_tags_and_posts_tags
+    success = true
     tags.each do |tag|
-      PostsTag.where(tag_id: tag.id, post_id: id).last.destroy
-      tag.destroy
+      unless PostsTag.where(tag_id: tag.id, post_id: id).last.destroy
+        success = false
+        break
+      end
+      unless tag.destroy
+        success = false
+        break
+      end
     end
+    return success
   end
 
   def search_score(posts_tags_from_search)
@@ -66,7 +74,7 @@ class Post < ActiveRecord::Base
     all_posts = Array.new
     post_objects = Post.all
     post_objects.each do |post|
-      all_posts << post.title + post.content
+      all_posts << "#{post.title} #{post.content}"
     end
     return all_posts
   end
