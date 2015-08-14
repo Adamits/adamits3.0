@@ -1,10 +1,10 @@
-# This is the public object that should be used in the website. 
+# This is the public object that should be used in the website.
 #
 # Takes two params:
 #
 # document- the document to extract tags from.
 # collection- the corpus of other documents to compare it to.
-include TfIdf
+require TfIdf
 class TfIdf::WeightedTags
 	attr_reader :tf_idf_hash
 	def initialize(collection, document)

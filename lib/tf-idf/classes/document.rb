@@ -1,7 +1,7 @@
 # This is a document of the collection
 # That is checked to calculate an idf score.
 
-include TfIdf
+require TfIdf
 class TfIdf::Document < TfIdf::Collection
 	attr_reader :tokens
 

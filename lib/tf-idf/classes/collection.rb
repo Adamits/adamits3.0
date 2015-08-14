@@ -1,13 +1,13 @@
-include TfIdf
-class TfIdf::Collection 
+require TfIdf
+class TfIdf::Collection
 	# @idf_hash- A hash of terms and their idf scores
 	# @quantity- The amount of sub_docs in the collection
 	#
 	# This loops through all the terms from the tf_hash
 	# parameter to calculace document frequency
 	# The rest of the idf calculation is done in a seperate
-	# Loop so that the Math does not need to run 
-	# collection.quantity X terms_doc.quantity times. 
+	# Loop so that the Math does not need to run
+	# collection.quantity X terms_doc.quantity times.
 	attr_reader :idf_hash, :collection, :quantity
 
 	def initialize(collection, tf_hash)

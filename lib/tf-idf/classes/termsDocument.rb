@@ -1,9 +1,9 @@
 # This is the document whose terms are being weighted.
 # tf_hash: A hash of all valid terms => their term frequency
-# 
+#
 # tf_hash is an attribute of the TermsDocument, because all terms
 # Of the document must be parsed in order to have an accurate tf.
-include TfIdf
+require TfIdf
 class TfIdf::TermsDocument
 	attr_reader :tf_hash, :tokens, :term, :quantity, :content
 
@@ -13,8 +13,8 @@ class TfIdf::TermsDocument
 
 	def get_terms_and_tf_scores
 		@tf_hash = Hash.new(0.0)
-		# The amount of times a term appears 
-		# In the document divided by the total 
+		# The amount of times a term appears
+		# In the document divided by the total
 		# Amount of tokens in the document.
 		@tokens = tokenize
 		@quantity = @tokens.length
