@@ -1,4 +1,4 @@
-<% if @posts_tags.any? %>
+<% if @posts_tags.present? %>
   <% @posts_and_scores_hash.reverse.each do |post, score| %>
   	<div class="row mt-8 nmh-3">
   		<div class="col-md-6 col-md-offset-2 ph-3">
