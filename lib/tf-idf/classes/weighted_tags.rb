@@ -4,7 +4,7 @@
 #
 # document- the document to extract tags from.
 # collection- the corpus of other documents to compare it to.
-require TfIdf
+include TfIdf
 class TfIdf::WeightedTags
 	attr_reader :tf_idf_hash
 	def initialize(collection, document)
