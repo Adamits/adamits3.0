@@ -1,8 +1,8 @@
 # This is a document of the collection
 # That is checked to calculate an idf score.
 
-require './collection.rb'
-class Document < Collection
+include TfIdf
+class TfIdf::Document
 	attr_reader :tokens
 
 	def initialize(document)

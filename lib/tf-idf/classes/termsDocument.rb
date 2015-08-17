@@ -3,7 +3,8 @@
 #
 # tf_hash is an attribute of the TermsDocument, because all terms
 # Of the document must be parsed in order to have an accurate tf.
-class TermsDocument
+include TfIdf
+class TfIdf::TermsDocument
 	attr_reader :tf_hash, :tokens, :term, :quantity, :content
 
 	def initialize(content)
