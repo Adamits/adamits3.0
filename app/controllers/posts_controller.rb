@@ -7,8 +7,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @tags_hash = @post.tags_hash
-    @extracted_terms = @post.extracted_terms(@tags_hash)
+    @tags_hash = @post.tags_and_scores_hash
+    @extracted_terms = @post.extracted_terms
   end
 
   def search
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       end
       @posts_tags.each do |posts_tag|
         @posts_and_scores_hash[posts_tag.post] = posts_tag.post.search_score(@posts_tags) #[post => score]
-        @posts_and_tags_hash[posts_tag.post] = posts_tag.post.tags_and_scores_hash(@posts_tags) #[post => [tag => score]]
+        @posts_and_tags_hash[posts_tag.post] = posts_tag.post.search_tags_and_scores_hash(@posts_tags) #[post => [tag => score]]
       end
       @posts_and_scores_hash = @posts_and_scores_hash.sort_by {|post, score| score}
     end

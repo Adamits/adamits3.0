@@ -7,7 +7,7 @@
 	<% if current_user and current_user.admin %>
 		<div class="col-md-3 pa-4 phn-mobile" style="padding-right: 82.25px">
 			<%= form_tag search_posts_path, { method: :get } do %>
-				<%= text_field_tag :search, nil, {placeholder: "search", class: 'fit-parent'} %>
+				<%= text_field_tag :search, nil, {placeholder: "search...", class: 'fit-parent'} %>
 			<% end %>
 		</div>
 		<%= link_to new_admin_post_path do %>
@@ -20,18 +20,18 @@
 	<% else%>
 		<div class="col-md-4 pa-4 phn-mobile" style="padding-right: 82.25px">
 			<%= form_tag search_posts_path, { method: :get } do %>
-				<%= text_field_tag :search, nil, {placeholder: "search", class: 'fit-parent'} %>
+				<%= text_field_tag :search, nil, {placeholder: "search...", class: 'fit-parent'} %>
 			<% end %>
 		</div>
 	<% end %>
-	<%= link_to resumes_path do %>
+	<%= link_to resume_path do %>
 		<div class="col-md-1 c-white ph-4 header-option-hover full-height text-center">
 			<div class="pv-4">
 				Resume
 			</div>
 		</div>
 	<% end %>
-	<%= link_to "#" do %>
+	<%= link_to about_path do %>
 		<div class="col-md-1 ph-4 c-white header-option-hover text-center">
 			<div class="pv-4">
 				About

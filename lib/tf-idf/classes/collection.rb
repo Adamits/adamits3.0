@@ -1,5 +1,4 @@
-include TfIdf
-class TfIdf::Collection
+class Collection
 	# @idf_hash- A hash of terms and their idf scores
 	# @quantity- The amount of sub_docs in the collection
 	#

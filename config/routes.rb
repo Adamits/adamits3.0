@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :resumes, only: ['index']
+  get '/resume', to: 'resumes#show'
+  get '/about', to: 'abouts#show'
 
 end

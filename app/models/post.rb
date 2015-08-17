@@ -5,23 +5,17 @@ class Post < ActiveRecord::Base
 	has_many :tags, :through => :posts_tags
   validates_presence_of :title, :content
 
-  def tags_hash
+  def tags_and_scores_hash
     tags_hash = Hash.new
     tags.each do |tag|
-      post_tag = PostsTag.where(post_id: id, tag_id: tag.id)
-      tags_hash[tag.tag] = post_tag.first.term_score
+      post_tag = PostsTag.where(post_id: id, tag_id: tag.id).last
+      tags_hash[tag.tag] = post_tag.term_score
     end
-    tags_hash = tags_hash.sort_by {|key, value| value}
-    tags_hash.reverse!
+    tags_hash.sort_by {|key, value| value}.reverse.to_h
   end
 
-  def extracted_terms (tags_hash)
-    extracted_terms = Array.new
-    tags_hash.first(10).each do |array|
-      tag = array[0]
-      extracted_terms.append tag
-    end
-    extracted_terms
+  def extracted_terms
+    extracted_terms = tags_and_scores_hash.keys.first(10)
   end
 
   def get_weighted_tags
@@ -61,7 +55,7 @@ class Post < ActiveRecord::Base
     score
   end
 
-  def tags_and_scores_hash(posts_tags_from_search)
+  def search_tags_and_scores_hash(posts_tags_from_search)
     tags_and_scores = Hash.new
     posts_tags_from_search.each do |posts_tag_from_search|
       if posts_tag_from_search.post.id == id

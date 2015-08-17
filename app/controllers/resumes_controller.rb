@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
 
-  def index
+  def show
 
   end
 end
