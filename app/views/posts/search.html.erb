@@ -1,7 +1,7 @@
 <% if @posts_tags.present? %>
   <% @posts_and_scores_hash.reverse.each do |post, score| %>
   	<div class="row mt-8 nmh-3">
-  		<div class="col-md-6 col-md-offset-2 ph-3">
+  		<div class="col-sm-6 col-sm-offset-2 ph-3">
   			<%= link_to post_path(post) do %>
           <div class="fw-3">
             <%= post.title %>
@@ -15,9 +15,10 @@
   	</div>
   <% end %>
 <% else %>
-  <div class="pa-8">
-    <div class="fw-3">
+  <div class="row mt-8 nmh-3">
+    <div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1 ph-3 fs-8 fw-3">
       No content matches your search, BROTHER!
+      <%= image_tag "the_HULK.jpeg", class: "img-responsive mt-6 mh-6 bs-sld bwa-xs-3 bc-xs-5" %>
     </div>
   </div>
 <% end %>
