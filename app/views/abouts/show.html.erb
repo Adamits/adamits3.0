@@ -3,31 +3,39 @@
     <h3 class="text-center"> A little about me</h3>
     <div class="row nmh-3">
       <div class="col-sm-4 ph-3">
-        <%= image_tag "burmaTrain.jpg", class: "img-responsive" %>
+        <%= image_tag "jumpin.jpg", class: "img-responsive" %>
       </div>
       <div class="col-sm-8 ph-3">
-        <div class="fs-6">
-          I rode in the back of a train through Myanmar once. It was fun. That was a long time ago. Now I live in Chicago working from home as a software engineer on a contract basis. I work on ecommerce web applications in Ruby on Rails. I am extremely interested in applicaitons that utilize natural language processing, but my knowledge is rudimentary at best. If you'd like to talk software, NLP, or trains, shoot me an email at ajwieme@gmail.com
+        <div class="fs-8">
+          I jumped off a cliff once. It was fun. That was a long time ago. Now I live in Chicago working from home as a software engineer on a contract basis. I work on ecommerce web applications in Ruby on Rails. I am extremely interested in applicaitons that utilize natural language processing, but my knowledge is rudimentary at best. If you'd like to talk software, NLP, or cliffs, shoot me an email at ajwieme@gmail.com
         </div>
       </div>
     </div>
     <h3 class="mt-5 pt-5 bs-sld bwt-1 bc-sm-5 text-center">A little about this site</h3>
     <div class="row nmh-3">
       <div class="col-sm-8 ph-3">
-        <div class="fs-6">
+        <div class="fs-8">
           This is my personal website, which exists as a portfolio, as well as a space to build side-projects for my own entertainment and learning. I wrote the blog portion not as much for me to write blog posts, which I intend to do regarding the projects that I am working on, as I did to build a live data set that I can manipulate in order to employ some of the basics of natural language processing. Until I get to filling the blog out, Samuel Jackson movie quotes from <a href="www.slipsum.com">slipsum.com</a> will have to do because, as we all know, everything that he says is gold.
         </div>
       </div>
       <div class="col-sm-4 ph-3">
-        <%= image_tag "jumpin.jpg", class: "img-responsive" %>
+        <%= image_tag "bayesian_inference.jpg", class: "img-responsive" %>
       </div>
     </div>
     <div class="mt-3 fs-6">
       Currently, I am using a small library that I wrote, which implements a very basic 'term-frequency inverse-document-frequency' algorithm, for which each blog post is a document in a set. Any given blog post will have a weighted decimal score from 0 - 1 calculated for each term in that post. Higher weighted terms (i.e. those that are closer to 1) are more relevant to the blog post. The search feature on the site then searches for any blog post whose content matches a token in the search, and ranks the returned posts by the sum of the term scores for each search token in that blog post.
     </div>
     <h3 class="mt-5 pt-5 bs-sld bwt-1 bc-sm-5 text-center">The future is bright</h3>
-    <div class="mt-3 fs-6">
-      I intend to soon add a feature to the library that calculates weighted scores based on n-gram analysis, which can be used to more accurately find which posts are relevant to your search based on the order of the search tokens. I would also like to weigh non-trivial words in the title of a post higher than if those words appear in the content.
+    <div class="row nmh-3">
+      <div class="col-sm-4 ph-3">
+        <%= image_tag "picture_in_iowa.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-sm-8 ph-3">
+        <div class="fs-8">
+          <p>I look a bit more like this these days. I plan on continuing to build e-commerce websites, and expanding my knowledge of Natural Language processing.</p>
+          <p>For this site I intend to soon add a feature to the library that calculates weighted scores based on n-gram analysis, which can be used to more accurately find which posts are relevant to your search based on the order of the search tokens. I would also like to weigh non-trivial words in the title of a post higher than if those words appear in the content.</p>
+        </div>
+      </div>
     </div>
     <div class="mt-4 pt-4 fs-4 fw-3 bs-sld bwt-1 bc-sm-5 italicize">
       This site is built in rails, and the code to my library is written in ruby. The front end uses a css framework called helio, developed by <span class="c-blue"><a href="http://www.superjova.com" target="_blank">superjova.com</a></span>, as well as bootstrap.
