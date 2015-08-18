@@ -1,6 +1,6 @@
-<% @posts.take(3).each do |posts_row| %>
+<% @posts.each_slice(3) do |posts_row| %>
   <div class="row nmh-4 pv-8">
-    <%= post_row.each do |post| %>
+    <% posts_row.each do |post| %>
       <div class="col-md-4 ph-1 pt-4">
       	<div class="bwa-1 bs-sld bc-5 bgc-white pa-4" style="min-height: 170px">
   	      <h4><%= post.title %></h4>
@@ -11,8 +11,8 @@
   		      <% end %>
   		    </div>
   		  </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 <% end %>
 <% if current_user && current_user.admin %>
