@@ -1,18 +1,20 @@
-<div class="row nmh-4 pv-8">
-	<% @posts.each do |post| %>
-    <div class="col-md-4 ph-1 pt-4">
-    	<div class="bwa-1 bs-sld bc-5 bgc-white pa-4" style="min-height: 170px">
-	      <h4><%= post.title %></h4>
-	      <div class="pt-4">
-	      	<%= post.content[0, 200]  %>...
-	      	<%= link_to post, class: "c-blue-link" do %>
-		        Read More
-		      <% end %>
-		    </div>
-		  </div>
+<% @posts.take(3).each do |posts_row| %>
+  <div class="row nmh-4 pv-8">
+    <%= post_row.each do |post| %>
+      <div class="col-md-4 ph-1 pt-4">
+      	<div class="bwa-1 bs-sld bc-5 bgc-white pa-4" style="min-height: 170px">
+  	      <h4><%= post.title %></h4>
+  	      <div class="pt-4">
+  	      	<%= post.content[0, 200]  %>...
+  	      	<%= link_to post, class: "c-blue-link" do %>
+  		        Read More
+  		      <% end %>
+  		    </div>
+  		  </div>
+      <% end %>
     </div>
-	<% end %>
-  <% if current_user && current_user.admin %>
-    <%= link_to "Update All", update_all_admin_posts_path, class: "mt-4 btn btn-success" %>
-  <% end %>
-</div>
+  </div>
+<% end %>
+<% if current_user && current_user.admin %>
+  <%= link_to "Update All", update_all_admin_posts_path, class: "mt-4 btn btn-success" %>
+<% end %>
