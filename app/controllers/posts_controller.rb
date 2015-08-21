@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @tags_hash = @post.tags_and_scores_hash
     @extracted_terms = @post.extracted_terms
+    @extracted_meta_tags = @post.extracted_terms.join(", ")
   end
 
   def search
