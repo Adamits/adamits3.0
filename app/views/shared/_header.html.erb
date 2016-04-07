@@ -1,48 +1,64 @@
-<div class="row nmh-4 bgc-header">
-	<div class="col-md-3 col-md-offset-1 ph-4 text-center">
-		<%= link_to root_path do %>
-			<%= image_tag("Adamits_logo.jpg") %>
+<div class="bgc-header">
+	<div class="row nmh-4">
+		<div class="col-md-3 ph-4 text-center">
+			<div class="row nmh-4">
+				<div class="col-md-12 col-xs-4 ph-4">
+					<%= link_to root_path do %>
+						<div >
+							<%= image_tag("the_real_copy.jpg", class: "img-responsive") %>
+						</div>
+						<div class="pull-right">
+							<%= image_tag("Adamits_logo.jpg", class: "img-responsive") %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-md-offset-2 ph-4">
+			<div class="row nmhxs">
+				<%= link_to resume_path do %>
+					<div class="col-xs-4 c-white ph-4 header-option-hover text-left">
+						<div class="pv-4">
+							Resume
+						</div>
+					</div>
+				<% end %>
+				<%= link_to about_path do %>
+					<div class="col-xs-4 ph-4 c-white header-option-hover text-left">
+						<div class="pv-4">
+							About
+						</div>
+					</div>
+				<% end %>
+				<%= link_to "#" do %>
+					<div id="Admin" class="col-xs-4 ph-4 c-white header-option-hover text-left">
+						<div class="pv-4">
+							Admin
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<div class="row nmhxs">
+				<div class="col-md-10 col-md-offset-0 col-xs-6 col-xs-offset-3 pa-4">
+		      <%= form_tag search_posts_path, { method: :get } do %>
+		        <%= text_field_tag :search, nil, {placeholder: "search...", class: 'ph-2 fit-parent'} %>
+		      <% end %>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>
+<% if current_user and current_user.admin %>
+	<div class="col-xs-3 pa-4 phn-mobile" style="padding-right: 82.25px">
+		<%= form_tag search_posts_path, { method: :get } do %>
+			<%= text_field_tag :search, nil, {placeholder: "search...", class: 'fit-parent'} %>
 		<% end %>
 	</div>
-	<% if current_user and current_user.admin %>
-		<div class="col-md-3 pa-4 phn-mobile" style="padding-right: 82.25px">
-			<%= form_tag search_posts_path, { method: :get } do %>
-				<%= text_field_tag :search, nil, {placeholder: "search...", class: 'fit-parent'} %>
-			<% end %>
-		</div>
-		<%= link_to new_admin_post_path do %>
-			<div class="col-md-1 ph-4 c-white header-option-hover text-center">
-	    	<div class="pv-4">
-	    		New Post
-	    	</div>
-			</div>
-		<% end %>
-	<% else%>
-		<div class="col-md-4 pa-4 phn-mobile" style="padding-right: 82.25px">
-			<%= form_tag search_posts_path, { method: :get } do %>
-				<%= text_field_tag :search, nil, {placeholder: "search...", class: 'fit-parent'} %>
-			<% end %>
+	<%= link_to new_admin_post_path do %>
+		<div class="col-xs-1 ph-4 c-white header-option-hover text-center">
+    	<div class="pv-4">
+    		New Post
+    	</div>
 		</div>
 	<% end %>
-	<%= link_to resume_path do %>
-		<div class="col-md-1 c-white ph-4 header-option-hover full-height text-center">
-			<div class="pv-4">
-				Resume
-			</div>
-		</div>
-	<% end %>
-	<%= link_to about_path do %>
-		<div class="col-md-1 ph-4 c-white header-option-hover text-center">
-			<div class="pv-4">
-				About
-			</div>
-		</div>
-	<% end %>
-	<%= link_to "#" do %>
-		<div id="Admin" class="col-md-1 ph-4 c-white header-option-hover text-center">
-			<div class="pv-4">
-				Admin
-			</div>
-		</div>
-	<% end %>
-</div>
+<% end %>
